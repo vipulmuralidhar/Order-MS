@@ -22,7 +22,7 @@ public class OrderController {
     @PostMapping("/saveOrder")
     public ResponseEntity<OrderDTO> saveOrder(@RequestBody OrderDTOFromFE orderDTOFromFE){
 
-        return  new ResponseEntity<>(orderService.saveOrderInDB(orderDTOFromFE),HttpStatus.OK);
+        return  new ResponseEntity<>(orderService.saveOrderInDB(orderDTOFromFE),HttpStatus.CREATED);
     }
 
 
