@@ -27,7 +27,7 @@ pipeline {
 
     stage('SonarQube Analysis') {
   steps {
-    sh 'mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.host.url=http://35.153.143.109:9000/ -Dsonar.login=squ_6738f3dc50d777d768a7d5a64f8089db1750c3a3'
+    sh 'mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.host.url=http://44.210.102.62:9000/ -Dsonar.login=squ_6738f3dc50d777d768a7d5a64f8089db1750c3a3'
   }
 }
 
@@ -36,7 +36,7 @@ pipeline {
             steps {
                 script {
                     def token = "squ_6738f3dc50d777d768a7d5a64f8089db1750c3a3"
-                    def sonarQubeUrl = "http://35.153.143.109:9000/api"
+                    def sonarQubeUrl = "http://44.210.102.62:9000/api"
                     def componentKey = "com.vipsfoodcourt:order"
                     def coverageThreshold = 10.0
 
